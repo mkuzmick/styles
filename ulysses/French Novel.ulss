@@ -1,0 +1,610 @@
+//
+// French Novel 
+// Landscape 2 Columns
+//
+// Somewhere from The Soulmen's Novel Cochin
+//
+// This stylesheet intend to be for (short) novel writer first
+// No claim to be perfect, clever or useful. Just for fun :-)
+// Please be free to use, share, improve & feedback
+// @radiololo
+//
+// nb : document format is A4
+//
+
+
+
+
+document-settings {
+	
+	page-orientation:		landscape
+
+	page-height:	 		210mm
+	page-width:		 		297mm
+
+	page-inset-bottom:		1.5cm
+	page-inset-inner:		2cm
+	page-inset-outer:		2cm
+	page-inset-top:			1.5cm
+
+	section-break:			heading-1
+
+	column-count: 			2
+	column-spacing-width: 	45pt
+	
+	footnote-enumeration:	per-section
+	footnote-placement:		end-of-page
+	footnote-style:			decimal
+	
+	}
+
+
+defaults {
+
+	font-family:		"Garamond"
+	font-size:			11pt
+	line-height:		14pt
+	font-color:			$textcolor
+	
+	text-alignment: 	justified
+	hyphenation:		yes
+
+	}
+
+
+//
+// Header & footer areas
+//
+
+
+area-header {
+
+	content:			none
+	top-spacing:		0mm
+	bottom-spacing:		0mm
+
+	}
+	
+
+area-footnotes {
+
+	font-size:			9pt
+	line-height:		14pt
+	top-spacing:		4mm
+
+	divider-width:		0.4pt
+	divider-length:		17mm
+	divider-spacing:	1pt
+
+	anchor-inset:		5mm
+	anchor-alignment:	right
+
+	text-inset: 		6mm
+
+	}
+
+
+area-footer {
+
+	content:			page-number
+
+	text-alignment:		right
+	top-spacing:		0mm
+	bottom-spacing:		7mm
+
+	}
+
+
+//
+// Own styles
+//
+
+$mark-color =		#FEFECC
+$comment-color =	#D9629B
+$black =			#000000
+$light-grey =		#F0EBF0
+$textcolor =		#18181E
+$enumeratorcolor =	#7E0F22
+
+
+
+//
+// Headers
+//
+// nb : to keep the two columns' lines always sync, headings' line-height & margins 
+// must be a multiple of paragraph's line-height (here 14pt), except for heading-1 
+// which start on a new page
+//
+
+
+heading-all {
+
+	font-family:			"Helvetica Neue"
+	font-style:				"UltraLight"
+	character-spacing:  	1pt
+	keep-with-following:	true
+	text-alignment: 		left
+	hyphenation:			no
+
+	}
+
+
+heading-1 {
+
+	style-title:	"Heading 1"	
+
+	font-size:		34pt
+	line-height: 	34pt
+
+	margin-top:		56pt
+	margin-bottom:	50pt
+
+	}
+
+
+heading-2 { 
+
+	style-title:	"Heading 2"		
+
+	font-size:		24pt
+	line-height:	28pt
+
+	margin-top: 	28pt
+	margin-bottom:	14pt
+
+	}
+
+
+heading-all + heading-2 {
+    
+    margin-top: 	0pt
+    margin-bottom:	14pt
+	
+	}
+
+
+heading-3 {
+
+	style-title:	"Heading 3"		
+
+	font-size:		14pt
+	line-height:	14pt
+	font-style:		"Light"
+
+	margin-top: 	28pt
+	margin-bottom:	14pt
+
+	}
+
+
+heading-all + heading-3 {
+    
+    margin-top: 	0pt
+    margin-bottom:	14pt
+	
+	}
+
+
+heading-4 {
+
+	style-title:	"Heading 4"		
+
+	font-size:		11pt
+	line-height: 	14pt
+	font-style:		"Light"
+
+
+	margin-top: 	14pt
+	margin-bottom:	0pt	
+
+	first-line-indent: 10pt
+
+	}
+
+
+heading-all + heading-4 {
+    
+    margin-top: 	0pt
+    margin-bottom:	0pt
+	
+	}
+
+
+heading-5 {
+
+	style-title:	"Heading 5"		
+
+	font-size:		9pt
+	line-height: 	14pt
+	font-style:		"Light"
+
+
+	margin-top: 	14pt
+	margin-bottom:	0pt
+
+	first-line-indent: 10pt
+
+	}
+
+
+heading-6 {
+
+	style-title:	"Heading 6"	
+
+	font-size:		9pt
+	line-height: 	14pt
+
+	margin-top: 	14pt
+	margin-bottom:	0pt
+
+	first-line-indent: 10pt
+
+	}
+
+
+//
+// Paragraph
+//
+
+
+paragraph {
+
+	style-title:		"Paragraph"
+	first-line-indent:	10pt
+
+	}
+
+
+paragraph-divider {
+
+	content:        	"***"
+	page-break:			none
+	margin-top: 		28pt
+	margin-bottom:		14pt
+	text-alignment :	center
+	
+	}
+
+
+paragraph-figure {
+
+  	visibility:		hidden
+//	I couldn't resize pictures in order to keep the 2 columns sync
+//	so I prefered disable this stuff
+
+	}
+
+
+
+//
+// Block styles
+//
+
+
+block-all {
+	
+	margin-top:			14pt
+	margin-bottom:		14pt
+	margin-left:		25pt
+	margin-right:		25pt
+	text-alignment:		justified
+	first-line-indent:	0pt
+
+	}
+
+
+block-code {
+
+	style-title:		"Codeblock"
+	font-family:		"Helvetica Neue"
+	font-weight:		normal
+	font-slant:			normal
+	font-size:			9pt
+	background-color: 	$light-grey
+	hyphenation:		no
+
+	}
+
+
+heading-all + block-code {
+
+	margin-top:			0pt
+
+	}
+
+
+block-code paragraph {
+
+	first-line-indent:	0pt
+
+	}
+
+
+block-quote {
+
+	style-title:		"Blockquote"	
+	font-slant:			italic
+	first-line-indent: 	0pt
+
+	}
+
+
+heading-all + block-quote {
+
+	margin-top:			0pt
+
+	}
+
+
+block-quote paragraph {
+
+	first-line-indent: 	0pt
+
+	}
+
+
+block-raw {
+
+	visibility:			hidden
+
+	}
+
+
+block-comment {
+
+	visibility:			hidden
+	background-color:	$comment-color
+	margin-left:		0pt
+	margin-right:		8pt
+	text-alignment: 	right
+
+	}
+
+
+heading-all + block-comment {
+
+	margin-top:			0pt
+
+	}
+
+
+block-comment paragraph {
+
+	first-line-indent: 	0pt
+
+	}
+
+
+
+//
+// List styles
+//
+
+
+list-all {
+
+	margin-left:	15pt
+	margin-right:	15pt
+	item-spacing:	0pt
+
+	}
+
+list-all :enumerator {
+
+	font-weight:    normal
+ 	font-size:		9pt
+ 	font-color:		$enumeratorcolor
+	// font-color doesn't seem to work
+
+}
+
+
+list-all list-all {
+
+	margin-top:		0pt
+	margin-bottom:	0pt
+
+	}
+
+
+list-ordered {
+
+	enumeration-format:	"%d."
+	text-inset:	12pt
+
+	}
+
+
+list-ordered list-ordered {
+
+	enumeration-format:	"%*%d"
+	text-inset:	17pt;
+
+	}
+
+
+list-ordered list-ordered list-ordered {
+
+	enumeration-format:	"%*.%d"
+	text-inset:	24pt;
+
+	}
+
+
+list-unordered {
+
+	enumeration-format:	"∙"
+	text-inset:	8pt;
+
+	}
+
+list-unordered list-unordered {
+
+	enumeration-format:	"∙"
+	text-inset:	7pt;
+
+	}
+
+
+list-unordered list-unordered list-unordered {
+
+	enumeration-format:	"∙"
+	text-inset:	8pt;
+
+	}
+
+heading-all + list-all {
+	
+	margin-top: 0pt
+		
+	}
+
+
+list-all paragraph {
+
+	margin-top: 0pt
+
+	}
+
+
+
+//
+// Inline styles
+//
+
+
+inline-strong {
+
+	style-title:	"Strong"	
+	font-weight:	bold
+
+	}
+
+
+inline-emphasis {
+
+	style-title:	"Emphasis"	
+	font-slant: 	italic
+
+	}
+
+
+inline-mark {
+
+	style-title:		"Mark"
+	background-color:	$mark-color
+
+	}
+
+
+inline-citation {
+
+	style-title:	"Inline Cite"	
+	font-slant:		italic
+
+	}
+
+
+inline-code {
+
+	style-title:		"Inline Code"
+	font-family:		"Helvetica Neue"
+	font-weight:		normal
+	font-slant:			normal
+	font-size:			9pt
+	background-color: 	$light-grey
+	
+	}
+
+
+inline-link {
+
+	style-title:		"Link"
+
+	underline:			none
+	underline-color:	$black
+
+	font-color:			$black
+	background-color:   $light-grey
+
+	}
+
+
+inline-comment {
+
+	visibility:			hidden;
+	background-color:	$comment-color
+
+	}
+
+
+inline-annotation {
+
+	background-color:	$mark-color
+
+	}
+
+
+inline-annotation:anchor {
+
+	background-color:	none
+
+	}
+
+
+inline-raw {
+
+	visibility:		hidden
+
+	}
+
+
+inline-delete {
+
+	strikethrough:	single
+
+	}
+
+
+inline-footnote paragraph {
+
+	first-line-indent:	0pt
+
+	}
+
+
+inline-annotation paragraph {
+
+	first-line-indent:	0pt
+
+	}
+
+
+
+//
+// Ulysses specific stuff
+// By default, we are hiding tags (##) etc.
+//
+
+
+ulysses-tag {
+
+	visibility:	hidden
+
+	}
+
+
+ulysses-whitespace {
+
+	visibility:	hidden
+
+	}
+
+
+ulysses-escape-character {
+
+	visibility:	hidden
+
+	}
+
+

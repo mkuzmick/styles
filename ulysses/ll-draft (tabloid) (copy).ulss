@@ -1,0 +1,592 @@
+//
+// LL-Report 
+// MLV-Report
+//
+
+
+
+
+document-settings {
+	
+	page-inset-bottom:		3cm
+	page-inset-inner:		3cm
+	page-inset-outer:		14cm
+	page-inset-top:			3cm
+
+	section-break:			heading-1
+
+//	footnote-enumeration:	per-section
+//	footnote-placement:		end-of-page
+//	footnote-style:			decimal
+	
+	}
+
+
+defaults {
+
+	font-family:		"Adobe Garamond Pro"
+	font-size:			11pt
+	line-height:		15pt
+	font-color:			$textcolor
+	
+	text-alignment: 	left
+	hyphenation:		yes
+
+	}
+
+
+//
+// Header & footer areas
+//
+
+
+area-header {
+
+	content:			none
+	top-spacing:		0mm
+	bottom-spacing:		0mm
+
+	}
+	
+
+area-footnotes {
+
+	font-size:			8pt
+	line-height:		9pt
+	top-spacing:		4mm
+
+	divider-width:		0.7pt
+	divider-length:		37mm
+	divider-spacing:	1pt
+
+	anchor-inset:		0mm
+	anchor-alignment:	right
+
+	text-inset: 		6mm
+
+	}
+
+
+area-footer {
+
+	content:			page-number
+
+	text-alignment:		right
+	top-spacing:		0mm
+	bottom-spacing:		17mm
+	font-family: "Avenir"
+
+	}
+
+
+//
+// Own styles
+//
+
+$mark-color =		#FEFECC
+$comment-color =	#D9629B
+$black =			#000000
+$light-grey =		#F0EBF0
+$textcolor =		#18181E
+$enumeratorcolor =	#7E0F22
+
+
+
+//
+// Headers
+//
+// nb : to keep the two columns' lines always sync, headings' line-height & margins 
+// must be a multiple of paragraph's line-height (here 14pt), except for heading-1 
+// which start on a new page
+//
+
+
+heading-all {
+
+	font-family:			"Avenir"
+	font-style:				"Light"
+	keep-with-following:	true
+	text-alignment: 		left
+	hyphenation:			no
+
+	}
+
+
+heading-1 {
+	font-family:			"Avenir"
+	font-style:				"Medium"
+	style-title:	"Heading 1"	
+	character-spacing:  	2pt
+	font-size:		24pt
+	line-height: 	26pt
+	margin-bottom: 	12pt
+	margin-top:		0pt
+
+	}
+
+
+heading-2 { 
+	font-family:			"Avenir"
+	font-style:				"Medium"
+	style-title:	"Heading 2"		
+	character-spacing:  	1.7pt
+	font-size:		16pt
+	line-height:	16pt
+	margin-top: 	16pt
+	margin-bottom:	3pt
+
+	}
+
+
+
+heading-3 {
+	font-family:			"Avenir"
+	font-style:				"Light"
+	style-title:	"Heading 3"		
+	character-spacing:  	1.5pt
+	font-size:		16pt
+	line-height:	16pt
+
+
+	margin-top: 	18pt
+	margin-bottom:	6pt
+
+	}
+
+
+
+heading-4 {
+	font-family:			"Avenir"
+	font-style:				"Light"
+	style-title:	"Heading 4"		
+	font-size:		12pt
+	character-spacing:  	1pt
+	line-height: 	14pt
+	margin-top: 	3pt
+	margin-bottom:	3pt	
+
+	}
+
+
+
+heading-5 {
+	font-family:			"Avenir"
+	font-style:				"Light"
+
+	style-title:	"Heading 5"		
+	font-size:		12pt
+	line-height: 	14pt
+	character-spacing:  	1pt
+	margin-top: 	0pt
+//	margin-left: 12pt
+	margin-bottom:	3pt
+
+	}
+
+
+heading-6 {
+
+	style-title:	"Heading 6"	
+
+	font-size:		12pt
+	line-height: 	14pt
+	font-family: 	"Adobe Garamond Pro"
+	margin-top: 	3pt
+	margin-bottom:	3pt
+
+
+	}
+
+
+//
+// Paragraph
+//
+
+
+paragraph {
+
+	style-title:		"Paragraph"
+	margin-top: 3pt
+	margin-bottom: 3pt
+	}
+
+
+paragraph-divider {
+
+	content:        	"***"
+	page-break:			none
+	margin-top: 		28pt
+	margin-bottom:		14pt
+	text-alignment :	center
+	
+	}
+
+
+paragraph-figure {
+
+	margin-top: 8pt
+	margin-bottom: 8pt
+ // 	visibility:		hidden
+//	I couldn't resize pictures in order to keep the 2 columns sync
+//	so I prefered disable this stuff
+
+	}
+
+
+
+heading-1 + paragraph {
+	margin-top:	0pt
+
+}
+
+heading-2 + paragraph {
+	margin-top:	0pt
+
+}
+
+//
+// Block styles
+//
+
+
+block-all {
+	
+	margin-top:			14pt
+	margin-bottom:		14pt
+	margin-left:		25pt
+	margin-right:		25pt
+	text-alignment:		left
+	first-line-indent:	0pt
+
+	}
+
+
+block-code {
+
+	style-title:		"Codeblock"
+	font-family:		"Helvetica Neue"
+	font-weight:		normal
+	font-slant:			normal
+	font-size:			9pt
+	background-color: 	$light-grey
+	hyphenation:		no
+
+	}
+
+
+heading-all + block-code {
+
+	margin-top:			0pt
+
+	}
+
+
+block-code paragraph {
+
+	first-line-indent:	0pt
+
+	}
+
+
+block-quote {
+
+	style-title:		"Blockquote"	
+	font-slant:			italic
+	first-line-indent: 	0pt
+
+	}
+
+
+heading-all + block-quote {
+
+	margin-top:			0pt
+
+	}
+
+
+block-quote paragraph {
+
+	first-line-indent: 	0pt
+
+	}
+
+
+block-raw {
+
+	visibility:			hidden
+
+	}
+
+
+block-comment {
+
+	visibility:			visible
+	font-family:			"Avenir"
+	font-style:				"Medium"
+	font-size:		7pt
+	line-height: 	9pt
+	margin-bottom: 	0pt
+	margin-top: 1pt
+	margin-right: 0pt
+	margin-left: 2cm
+	font-color:	rgb(170,170,170)
+	text-alignment: 	right
+
+	}
+
+
+heading-all + block-comment {
+
+	margin-top:			0pt
+
+	}
+
+
+block-comment paragraph {
+
+	first-line-indent: 	0pt
+
+	}
+
+
+
+//
+// List styles
+//
+
+
+list-all {
+
+	margin-left:	15pt
+	margin-right:	15pt
+	item-spacing:	0pt
+
+	}
+
+list-all :enumerator {
+
+	font-weight:    normal
+ 	font-size:		9pt
+ //	font-color:		$enumeratorcolor
+	// font-color doesn't seem to work
+
+}
+
+
+list-all list-all {
+
+	margin-top:		0pt
+	margin-bottom:	0pt
+
+	}
+
+
+list-ordered {
+
+	enumeration-format:	"%d."
+	text-inset:	12pt
+
+	}
+
+
+list-ordered list-ordered {
+
+	enumeration-format:	"%*%d"
+	text-inset:	17pt;
+
+	}
+
+
+list-ordered list-ordered list-ordered {
+
+	enumeration-format:	"%*.%d"
+	text-inset:	24pt;
+
+	}
+
+
+list-unordered {
+
+	enumeration-format:	"⏤"
+	text-inset:	8pt;
+
+	}
+
+list-unordered list-unordered {
+
+	enumeration-format:	"∙"
+	text-inset:	7pt;
+
+	}
+
+
+list-unordered list-unordered list-unordered {
+
+	enumeration-format:	"∙"
+	text-inset:	8pt;
+
+	}
+
+heading-all + list-all {
+	
+	margin-top: 0pt
+		
+	}
+
+
+list-all paragraph {
+
+	margin-top: 0pt
+
+	}
+
+
+
+//
+// Inline styles
+//
+
+
+inline-strong {
+
+	style-title:	"Strong"	
+	font-weight:	bold
+
+	}
+
+
+inline-emphasis {
+
+	style-title:	"Emphasis"	
+	font-slant: 	italic
+
+	}
+
+
+inline-mark {
+
+	style-title:		"Mark"
+	background-color:	$mark-color
+
+	}
+
+
+inline-citation {
+
+	style-title:	"Inline Cite"	
+	font-slant:		italic
+
+	}
+
+
+inline-code {
+
+	style-title:		"Inline Code"
+	font-family:		"Helvetica Neue"
+	font-weight:		normal
+	font-slant:			normal
+	font-size:			9pt
+	background-color: 	$light-grey
+	
+	}
+
+
+inline-link {
+
+	style-title:		"Link"
+
+	underline:			none
+	underline-color:	$black
+
+	font-color:			$black
+	background-color:   $light-grey
+
+	}
+
+
+inline-comment {
+
+	visibility:			hidden;
+	background-color:	$comment-color
+
+	}
+
+
+inline-annotation {
+
+	background-color:	$mark-color
+
+	}
+
+
+inline-annotation:anchor {
+
+	background-color:	none
+
+	}
+
+
+inline-raw {
+
+	visibility:		hidden
+
+	}
+
+
+inline-delete {
+
+	strikethrough:	single
+
+	}
+
+
+inline-footnote paragraph {
+
+	first-line-indent:	0pt
+
+	}
+
+
+inline-annotation paragraph {
+
+	first-line-indent:	0pt
+
+	}
+
+
+// media
+//
+
+media-image {
+	visibility: visible
+//	margin-left: 12pt;
+//	margin-right: 12pt;
+}
+
+//
+// Ulysses specific stuff
+// By default, we are hiding tags (##) etc.
+//
+
+
+ulysses-tag {
+
+	visibility:	hidden
+
+	}
+
+
+ulysses-whitespace {
+
+	visibility:	hidden
+
+	}
+
+
+ulysses-escape-character {
+
+	visibility:	hidden
+
+	}
+
+
