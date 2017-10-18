@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Preview</title>
+		<style type="text/css">
+		body {
+  		margin: 30px;
+  		padding: 0px;
+  		color: Black;
+  		font-size: 10px;
+  		font-family: "Avenir Next"; /*Default: "{{TEXT_FONT}}", Helvetica, sans-serif; */
+  		line-height: 110%;
+  		vertical-align: baseline;
+  		overflow: hidden;
+  		background-color: #FFFFFF;
+    }
+    a {
+  		color: rgb(0,0,50);
+  		text-decoration:none;
+    }
+    h1 {
+  		font-size: 28px;
+  		font-weight: 900;
+  		margin-top: 10px;
+  		margin-bottom: 10px;
+    }
+    h2 {
+  		font-family: {{H_FONT}};
+  		font-size: {{H2_FONT_SIZE}}px;
+  		font-weight: {{H_FONT_WEIGHT}};
+  		font-style: {{H_FONT_STYLE}};
+  		margin-top: 32px;
+  		margin-bottom: 12px;
+    }
+    h3 {
+  		font-family: {{H_FONT}};
+  		font-size: {{H3_FONT_SIZE}}px;
+  		font-weight: {{H_FONT_WEIGHT}};
+  		font-style: {{H_FONT_STYLE}};
+    }
+    h4, h5, h6 {
+  		font-family: {{H_FONT}};
+  		font-size: {{H3_FONT_SIZE}}px;
+  		font-weight: {{H_FONT_WEIGHT}};
+  		font-style: {{H_FONT_STYLE}};
+  		margin-top: 12px;
+  		margin-bottom: 0;
+    }
+    h1:first-child {
+			margin-top: 0;
+    }
+    p {
+			margin-bottom: 8px;
+    }
+    p:last-child {
+			margin-bottom:0;
+    }
+    ol {
+			list-style: outside decimal;
+    }
+    ul {
+			list-style: outside disc;
+    }
+    ol, ul {
+			padding-left:0;
+			margin-bottom:12px;
+    }
+    ol li {
+			margin-bottom:16px;
+			margin-left:28px;
+    }
+    ul li {
+			margin-bottom: 12px;
+			margin-left: 20px;
+    }
+    ol:last-child, ul:last-child {
+			margin-bottom:0;
+    }
+    li > p {
+			margin-bottom:12px;
+    }
+    li > ol, li > ul {
+			margin-top: 12px !important;
+			padding-left:12px;
+    }
+    dl {
+			margin-bottom: 12px;
+    }
+    dl dt {
+			font-weight: bold;
+			margin-bottom: 8px;
+    }
+    dl dd {
+			margin-left: 0;
+			margin-bottom: 12px;
+    }
+    dl dd:last-child, dl:last-child {
+			margin-bottom: 0;
+    }
+    pre {
+			white-space: pre-wrap;
+			margin-bottom: 24px;
+			overflow: hidden;
+			padding: 3px;
+			-webkit-border-radius: 3px;
+			background-color: {{CODE_BACKGROUND_COLOR}};
+			border: 1px solid {{CODE_BORDER_COLOR}};
+    }
+    code {
+			font-family: "{{CODE_FONT}}", monospace;
+			font-size: 0.9em;
+			white-space: nowrap;
+			padding: 2px;
+			-webkit-border-radius: 4px;
+			background-color: {{CODE_BACKGROUND_COLOR}};
+			border: 1px solid {{CODE_BORDER_COLOR}};
+    }
+    pre code {
+			font-family: "{{CODE_FONT}}", monospace;
+			font-size: {{CODE_FONT_SIZE}}px;
+			white-space: pre-wrap;
+			border: none;
+			padding: 0;
+			background-color: transparent;
+			-webkit-border-radius: 0;
+    }
+    blockquote {
+			border-left: 3px solid #ccc;
+			margin-left: 0;
+			margin-right: auto;
+			width: 95%;
+			padding: 0 10px;
+    }
+    table {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 24px;
+			border-bottom: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+			border-spacing: 0;
+    }
+    table th {
+			padding: 3px 10px;
+			background-color: {{BACKGROUND_COLOR}};
+			border-top: 1px solid #ddd;
+			border-left: 1px solid #ddd;
+    }
+    table td {
+			padding: 3px 10px;
+			border-top: 1px solid #ddd;
+			border-left: 1px solid #ddd;
+    }
+    img {
+			border: none;
+			display: block;
+			margin: 1em auto;
+			max-width: 100%;
+			align: right;
+    }
+    #content-wrapper {
+			height: 100%;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			font-size: 1.0em;
+			width: 100%;
+    }
+    #content {
+			width: auto;
+			padding: 10px 20px 20px 10px;
+    }
+    .footnote {
+			font-size: 0.8em;
+			vertical-align: super;
+    }
+    .footnotes ol {
+			font-weight: bold;
+    }
+    .footnotes ol li p {
+			font-weight: normal;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="content-wrapper">
+		<div id="content">
+		  {{CONTENT}}
+	  </div>
+    </div>
+  </body>
+</html>
